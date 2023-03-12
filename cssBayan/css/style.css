@@ -1,29 +1,87 @@
-body{
-font-family: 'Tilt Warp', cursive;
-height: 100%;
-padding: 0;
-margin: 0;
-font-size: 1rem;
-font-weight: 400;
-line-height: 1.5;
-background-color: #fafadf;
+body {
+    font-family: 'Tilt Warp', cursive;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fafadf;
 }
-.wrap{
-  padding: 2rem 5rem;
+
+.wrap {
+    padding: 0.5em 1rem;
+    font-size:0.75em;
 }
+
 .item {
-  position: relative;
-  margin-bottom: 1px;
-  width: 100%;
-  color: #000;
-  overflow: hidden;
-  }
-img{
-  width: 300px;
-  max-width: 100%;
-  height: auto;
-  }
-.mem-img{
-  text-align:center;
-  padding:1rem;
-  }
+    position: relative;
+    width: 100%;
+    color: #000;
+    overflow: hidden;
+    border-top: 0.01em solid #d8d4d4;
+}
+
+img {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+}
+
+.mem-img {
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height .35s;
+    transition: max-height .35s;
+}
+
+input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+label {
+    position: relative;
+    display: block;
+    padding: 0 0 0 1em;
+    line-height: 3;
+    cursor: pointer;
+}
+input:checked~.mem-img {
+    max-height: 100vh;
+    padding: 1em;
+}
+label i {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    font-size: 1.75em;
+    width: 1.75em;
+    height: 1.75em;
+    line-height: 1.75;
+    text-align: center;
+    -webkit-transition: all .35s;
+    transition: all .35s;
+}
+input[type=radio]:checked+label i {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+@media only screen and (min-width: 720px) {
+    .wrap {
+        padding: 0.5rem 1rem;
+        font-size: 1.1em;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    .wrap {
+        max-width: 720px;
+        height: auto;
+        min-height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        font-size: 1.3em;
+    }
+}
