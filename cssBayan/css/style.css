@@ -24,10 +24,12 @@ body::-webkit-scrollbar {
     color: #000;
     overflow: hidden;
     border-top: 0.01em solid #d8d4d4;
+    -webkit-transition: max-height .35s;
+    transition: max-height .35s;
 }
 
 img {
-    width: 200px;
+    width: 13em;
     max-width: 100%;
     height: auto;
 }
@@ -102,4 +104,8 @@ input[type=radio]:checked+label i {
         margin: 0 auto;
         font-size: 1.3em;
     }
+}
+
+input[type=radio]:checked+label{
+  color:#398dd2;
 }
