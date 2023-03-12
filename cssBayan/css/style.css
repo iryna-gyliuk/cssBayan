@@ -1,0 +1,29 @@
+body{
+font-family: 'Tilt Warp', cursive;
+height: 100%;
+padding: 0;
+margin: 0;
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.5;
+background-color: #fafadf;
+}
+.wrap{
+  padding: 2rem 5rem;
+}
+.item {
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+  color: #000;
+  overflow: hidden;
+  }
+img{
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  }
+.mem-img{
+  text-align:center;
+  padding:1rem;
+  }
