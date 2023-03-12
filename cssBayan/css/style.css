@@ -64,26 +64,31 @@ label {
     padding: 0 1em 1em;
 }
 
-label i {
+label:before {
     position: absolute;
     right: 0;
     top: 0;
     display: block;
-    font-size: 1.75em;
-    width: 1.75em;
-    height: 1.75em;
-    line-height: 1.75;
+    font-size: 1.2em;
+    width: 2.5em;
+    height: 2.5em;
+    line-height: 2.5;
     text-align: center;
     -webkit-transition: all .35s;
     transition: all .35s;
     opacity: 0;
+    display: inline-block;
+    font-family: FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.container-main:hover .item label i {
+.container-main:hover .item label:before {
     opacity: 1;
 }
 
-input[type=radio]:checked+label i {
+input[type=radio]:checked+label:before {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
 }
@@ -106,6 +111,6 @@ input[type=radio]:checked+label i {
     }
 }
 
-input[type=radio]:checked+label{
-  color:#398dd2;
+input[type=radio]:checked+label {
+    color: #398dd2;
 }
